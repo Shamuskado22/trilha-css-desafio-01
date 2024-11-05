@@ -1,0 +1,191 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --body-bg: #000000;
+
+  --header-border-bottom: 1px solid #33a8db;
+  --header-bg: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.6),
+    rgba(49, 169, 221, 0.2),
+    rgba(0, 0, 0, 0.6)
+  );
+  --header-logo-bg: #00000033;
+  --header-title: linear-gradient(180deg, #33a8db, #1472b7);
+  --header-button-border: linear-gradient(180deg, #3ba1cd, #1572b7);
+  --header-button-text: #31a8dd;
+
+  --main-title: #33a8db;
+  --main-module-border: 1px solid var(--main-title);
+  --main-module-inset: -2px 6px 4px 0px #00000066 inset;
+  --main-module-bg: #252525;
+  --main-transform-world-border: var(--header-border-bottom);
+  --main-transform-world-shadow-text: 3px 2px 0px #33a8db;
+
+  --footer-border-top: var(--header-border-bottom);
+  --footer-bg: linear-gradient(
+    180deg,
+    rgba(51, 168, 219, 0) 0%,
+    rgba(51, 168, 219, 0.2),
+    rgba(51, 168, 219, 0.2)
+  );
+  --footer-a: var(--main-title);
+
+  --reset-text: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--reset-text);
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  background-color: var(--body-bg);
+  text-align: center;
+}
+
+header.banner {
+  background: var(--header-bg), url(../images/banner.png) left no-repeat;
+  background-size: cover;
+  padding: 48px;
+  border-bottom: var(--header-border-bottom);
+}
+
+.banner-content > .logo {
+  background-color: var(--header-logo-bg);
+  border-radius: 50%;
+  width: 248px;
+  height: 248px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+}
+
+.banner-content > h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 40px;
+  background-image: var(--header-title);
+  background-clip: text;
+  color: transparent;
+  margin: 24px;
+}
+
+.banner-content > p {
+  width: 510px;
+  font-size: 19px;
+  margin: 0 auto 24px;
+}
+
+.banner-content > button {
+  font-size: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--header-button-text);
+  background-color: transparent;
+  border-image: var(--header-button-border) 1 / 2px / 0;
+  padding: 18px 44px;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.banner-content > button:hover {
+  color: var(--reset-text);
+}
+
+main {
+  padding: 24px 0;
+}
+
+main > #course-content {
+  padding: 64px;
+}
+
+#course-content > h2,
+#professional-challenges > h2 {
+  text-transform: uppercase;
+  font-size: 32px;
+  letter-spacing: 5px;
+  color: var(--main-title);
+  margin-bottom: 24px;
+}
+
+#course-content > p {
+  width: 792px;
+  font-size: 14px;
+  margin: 0 auto 16px;
+}
+
+#course-content > .modules-list {
+  width: 535px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: auto;
+}
+
+.modules-list > .module {
+  border: var(--main-module-border);
+  border-radius: 30px;
+  box-shadow: var(--main-module-inset);
+  background-color: var(--main-module-bg);
+  padding: 14px;
+  font-size: 14px;
+}
+
+.module > span {
+  color: var(--main-title);
+}
+
+main > #transform-world {
+  border-top: var(--main-transform-world-border);
+  border-bottom: var(--main-transform-world-border);
+  height: 90vh;
+  background: url(../images/woman-code.png) fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+#transform-world > p {
+  text-transform: lowercase;
+  font-size: 40px;
+  font-weight: 900;
+  text-shadow: var(--main-transform-world-shadow-text);
+  text-align: left;
+  width: 244px;
+  margin-left: 15vw;
+}
+
+main #professional-challenges {
+  padding: 64px;
+}
+
+#professional-challenges > img {
+  margin: 48px 0;
+}
+
+#professional-challenges > p {
+  width: 700px;
+  font-size: 14px;
+  margin: auto;
+}
+
+footer {
+  border-top: var(--footer-border-top);
+  background-image: var(--footer-bg);
+  padding: 48px;
+  font-size: 14px;
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--footer-a);
+}
